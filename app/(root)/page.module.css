@@ -1,0 +1,47 @@
+.Home{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(/assets/mainBackground.png);
+    background-attachment: fixed;
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.HomeContent h6 {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.6;
+}
+
+.HomeContent h5{
+    font-weight: 700;
+    font-size: 24px;
+    color: #b7b3b3;
+    line-height: 1.6;
+}
+
+.HomeContent h4 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-block: 10px;
+    line-height: 1.6;
+}
+
+.HomeContent .InputBox input{
+    width: 300px;
+    background: transparent;
+    border: 0.2px solid #ccc;
+    border-radius: 999px;
+    padding: 10px 18px;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.HomeContent .InputBox input::placeholder {
+    color: #ccc;
+}

@@ -1,0 +1,39 @@
+.Footer {
+    background-color: black;
+    padding-inline: 100px;
+    padding-block: 10px;
+    margin-top: 50px;
+}
+
+.Footer h6 {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.Footer h6 span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.Footer .FooterRow{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.Footer .FooterRow .FooterBox{
+    padding: 5px;
+}
+.Footer .FooterRow a {
+    display: block;
+    color: #a6a1a1;
+    margin-block: 10px;
+    transition: color 0.3s ease; /* Smooth transition */
+    font-size: large;
+}
+
+.Footer .FooterRow a:hover {
+    color: #ffffff;
+}

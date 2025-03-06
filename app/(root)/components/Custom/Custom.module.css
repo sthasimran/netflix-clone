@@ -1,0 +1,32 @@
+.Custom,
+.CustomImage{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /* border: 1px solid; */
+    padding-inline: 100px;
+    padding-block: 10px;
+    gap: 40px;
+}
+
+.Custom video{
+    width: 900px;
+}
+
+.Custom .CustomContent,
+.CustomImage .CustomContentImage {
+    margin-top: 100px;
+}
+
+.Custom div h6,
+.CustomImage div h6 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.Custom div p,
+.CustomImage div p {
+    font-size: 20px;
+    color: #ccc;
+    margin-top: 20px;
+}

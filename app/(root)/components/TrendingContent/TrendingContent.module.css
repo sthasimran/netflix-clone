@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  padding-inline: 100px;
+  padding-block: 10px;
+  background-color: #000;
+  color: white;
+  font-family: "Netflix Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 10px;
+}
+
+.carouselItem {
+  position: relative;
+  min-width: calc(16.666% - 8px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carouselItem:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.itemImage {
+  width: 100%;
+
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.itemTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carouselItem:hover .itemTitle {
+  opacity: 1;
+}
+
+.carouselContainer .navButton {
+  opacity: 1;
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.loading {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
+.error {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #e50914;
+}
+
+@media (max-width: 1200px) {
+  .carouselItem {
+    min-width: calc(25% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselItem {
+    min-width: calc(33.333% - 8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselItem {
+    min-width: calc(50% - 8px);
+  }
+}
