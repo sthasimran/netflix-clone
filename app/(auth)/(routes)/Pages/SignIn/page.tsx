@@ -1,11 +1,17 @@
 'use client';
 import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
 import './SignIn.css';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+
+  const {
+    register,
+    formState: { errors },
+  } = useForm();
 
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
