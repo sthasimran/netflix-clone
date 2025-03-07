@@ -1,17 +1,15 @@
+
 'use client';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './SignIn.css';
 
+
+
 export default function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
-
-  const {
-    register,
-    formState: { errors },
-  } = useForm();
 
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,3 +73,88 @@ export default function SignIn() {
     </div>
   );
 }
+
+
+
+/*
+
+'use client';
+
+import React from "react";
+import { useForm, FieldError } from "react-hook-form";
+import './SignIn.css';
+
+interface FormData {
+  email: string;
+  password: string;
+}
+
+
+const SignIn: React.FC = () => {
+ 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+
+  const onSubmit = (data: FormData) => {
+    console.log("Signing in with:", data);
+  
+  };
+
+  return (
+    <div className="sign-in-container">
+      <h1>Sign In</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="sign-in-form">
+        <div className="form-input">
+          <input
+            type="email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: "Invalid email format",
+              },
+            })}
+            placeholder="Email or mobile"
+          />
+          {errors.email && (
+            <p className="error-message">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div className="form-input">
+          <input
+            type="password"
+            {...register("password", {
+              required: "Password is required",
+              minLength: {
+                value: 6,
+                message: "Password must be at least 6 characters long",
+              },
+            })}
+            placeholder="Password"
+          />
+          {errors.password && (
+            <p className="error-message">{errors.password.message}</p>
+          )}
+        </div>
+
+        <button type="submit" className="submit-button">
+          Sign In
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default SignIn;
+
+*/
