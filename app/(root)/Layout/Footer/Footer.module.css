@@ -2,6 +2,7 @@
     background-color: black;
     padding-left: 100px;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .Footer h6 {
@@ -18,7 +19,7 @@
 .Footer .FooterRow{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
-    gap: 10px;
+    gap: 50px;
     margin-top: 20px;
 }
 

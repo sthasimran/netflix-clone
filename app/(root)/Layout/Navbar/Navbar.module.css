@@ -1,5 +1,5 @@
 .NavbarMain {
-    position:fixed;
+    position: absolute;
     width: 100%;
     padding-inline: 100px;
     padding-block: 10px;
